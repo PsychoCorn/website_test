@@ -1,0 +1,99 @@
+html {
+    height: 100%;
+}
+
+@font-face {
+	font-family: 'MainFont'; 
+	src: url(assets\fonts\OpenSans-VariableFont_wdth,wght.ttf)
+}
+
+body {
+    background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(163, 16, 16));
+    margin: 5;
+    padding: 20px;
+}
+
+
+h1 {
+    font-family: 'MainFont', sans-serif;
+    margin-left:400px;
+    margin-right:400px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h2 {
+    font-family: 'MainFont', sans-serif;
+    color: #ffffff;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 45px;
+}
+
+p {
+    font-family: 'MainFont', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    margin-left: 20px;
+    text-indent: 25px;
+}
+
+.content-panel-header {
+    width: 200px;
+    background-color: rgb(53, 2, 2);
+    padding: -10px;
+    margin-left: -13px;
+    margin-top: -13px;
+    border: solid;
+    border-radius: 5px;
+    border-color: white;
+}
+
+.content-panel-header h2 {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+    margin-left: -10px;
+  }
+
+.content-panel {
+    width: 200px;
+    background-color: #000000;
+    padding: 10px;
+    margin-left: 45px;
+    border: solid;
+    border-radius: 5px;
+    border-color: white;
+  }
+  
+  .content-panel h2 {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+    margin-left: -10px;
+  }
+  
+  .content-panel ul {
+    list-style-type: none;
+    padding: 15px;
+    color: white;
+  }
+  
+  .content-panel ol {
+    padding: 15px;
+    color: white;
+  }
+
+  .content-panel li {
+    margin-bottom: 5px;
+    color: white;
+  }
+  
+  .content-panel a {
+    text-decoration: none;
+  }
