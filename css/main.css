@@ -97,3 +97,9 @@ p {
   .content-panel a {
     text-decoration: none;
   }
+
+  @media (max-width: 600px) {
+    header h1 {
+        font-size: 24px;
+    }
+}
