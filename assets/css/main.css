@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+
+@font-face {
+	font-family: 'MainFont'; 
+	src: url(assets\fonts\OpenSans-VariableFont_wdth,wght.ttf) format("ttf"); 
+}
+
+body {
+    font-family: 'MainFont', sans-serif;
+    background: linear-gradient(to bottom right, rgb(163, 16, 16), rgb(0, 0, 0));
+    margin: 5;
+    padding: 20px;
+}
+
+
+h1 {
+    margin-left:400px;
+    margin-right:400px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 45px;
+}
+
+p {
+    /*font-family: 'MainFont'; */
+    font-size: 22px;
+    color: #ffffff;
+    margin-left: 20px;
+    text-indent: 25px;
+}
