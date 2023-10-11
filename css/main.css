@@ -8,13 +8,14 @@ html {
 }
 
 body {
+    background-repeat: no-repeat;
     background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(163, 16, 16));
     margin: 5;
     padding: 20px;
 }
 
 
-h1 {
+header h1 {
     font-family: 'MainFont', sans-serif;
     margin-left:400px;
     margin-right:400px;
@@ -98,8 +99,9 @@ p {
     text-decoration: none;
   }
 
-  @media (max-width: 600px) {
+  @media screen and (max-width: 1440px) {
     header h1 {
-        font-size: 24px;
+        margin-left:250;
+        margin-right:250;
     }
-}
+  }
