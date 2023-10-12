@@ -8,16 +8,21 @@ html {
 }
 
 body {
+    background-repeat: no-repeat;
     background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(163, 16, 16));
-    margin: 5;
-    padding: 20px;
+    /*margin: 5px;
+    padding: 20px;*/
+    margin: 0;
+    padding: 0;
 }
 
 
-h1 {
+header h1 {
     font-family: 'MainFont', sans-serif;
-    margin-left:400px;
-    margin-right:400px;
+    /*margin-left:calc(420px * max-width/width);
+    margin-right:calc(420px * max-width/width);*/
+    margin-left: 420px;
+    margin-right: 420px;
     color: #ffffff;
     text-align: center;
     padding-top: 50px;
@@ -59,7 +64,7 @@ p {
     font-size: 18px;
     text-align: center;
     margin-left: -10px;
-  }
+}
 
 .content-panel {
     width: 200px;
@@ -69,37 +74,91 @@ p {
     border: solid;
     border-radius: 5px;
     border-color: white;
-  }
+}
   
-  .content-panel h2 {
+.content-panel h2 {
     margin-top: 0;
     font-size: 18px;
     text-align: center;
     margin-left: -10px;
-  }
-  
-  .content-panel ul {
+}
+
+.content-panel ul {
     list-style-type: none;
     padding: 15px;
     color: white;
-  }
-  
-  .content-panel ol {
+}
+
+.content-panel ol {
     padding: 15px;
     color: white;
-  }
+}
 
-  .content-panel li {
+.content-panel li {
     margin-bottom: 5px;
     color: white;
-  }
-  
-  .content-panel a {
-    text-decoration: none;
-  }
+}
 
-  @media (max-width: 600px) {
+.content-panel a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+.main-text {
+    margin: 20px;
+    max-width: 1600;
+}
+
+.main-text p {
+    font-family: 'MainFont', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    text-indent: 25px;
+}
+
+.main-text h2 {
+    font-family: 'MainFont', sans-serif;
+    color: #ffffff;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+}
+
+/* Добавляем стили для мобильных устройств */
+@media only screen and (max-width: 600px) {
     header h1 {
-        font-size: 24px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .content-panel {
+        margin-left: 20px;
+    }
+}
+
+/* Добавляем стили для планшетов */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .content-panel {
+        margin-left: 100px;
+    }
+}
+
+/* Добавляем стили для десктопных устройств */
+@media only screen and (min-width: 1025px) {
+    header h1 {
+        margin-left: 420px;
+        margin-right: 420px;
+    }
+    .content-panel {
+        margin-left: 45px;
     }
 }
