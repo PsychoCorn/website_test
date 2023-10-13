@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    min-height: 100%;
 }
 
 @font-face {
@@ -9,7 +9,9 @@ html {
 
 body {
     background-repeat: no-repeat;
+    background-size: cover;
     background: linear-gradient(to bottom right, rgb(0, 0, 0), rgb(163, 16, 16));
+    background-attachment: fixed;
     /*margin: 5px;
     padding: 20px;*/
     margin: 0;
@@ -50,6 +52,7 @@ p {
 
 .content-panel-header {
     width: 200px;
+    background-repeat: no-repeat;
     background-color: rgb(53, 2, 2);
     padding: -10px;
     margin-left: -13px;
@@ -68,6 +71,7 @@ p {
 
 .content-panel {
     width: 200px;
+    background-repeat: no-repeat;
     background-color: #000000;
     padding: 10px;
     margin-left: 45px;
@@ -90,12 +94,14 @@ p {
 }
 
 .content-panel ol {
-    padding: 15px;
+    list-style: none;
+    counter-reset: li;
+    padding-left: 15px;
     color: white;
 }
 
 .content-panel li {
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     color: white;
 }
 
@@ -104,30 +110,105 @@ p {
 }
 
 header {
+    background-repeat: no-repeat;
     background-color: #000000;
     padding: 0;
     margin: 0;
 }
 
-.main-text {
+.container {
+    background-repeat: no-repeat;
     margin: 20px;
     max-width: 1600;
 }
 
-.main-text p {
+.container p {
     font-family: 'MainFont', sans-serif;
     font-size: 22px;
     color: #ffffff;
     text-indent: 25px;
 }
 
-.main-text h2 {
+.container h2 {
     font-family: 'MainFont', sans-serif;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: 25px;
+}
+
+.container h3 {
+    font-family: 'MainFont', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: li;
+}
+
+.content-panel li::before {
+    counter-increment: li;
+    content: counters(li,".") ". ";
+}
+
+.infobox {
+    width: 300px;
+    /*border: 1px solid #ffffff;*/
+    background-color: #000000;
+    margin: 1em 0;
+    padding: 0.5em;
+    float: right;
+}
+
+.infobox-title {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.infobox-content {
+    margin-bottom: 0.5em;
+}
+
+.infobox-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5em;
+}
+
+.infobox-link {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+.infobox-link:hover {
+    text-decoration: underline;
+}
+
+.infobox h2 {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* устанавливаем для таблицы внешнюю границу серого цвета толщиной 3px */
+/*.infobox-table {
+   border-top: 1px solid rgb(255, 255, 255);
+}*/
+/* задаём для ячейки тела таблицы границу серого цвета толщиной 1px */
+.infobox-table td {
+    /*border: 1px solid rgb(255, 255, 255);*/
+    font-family: 'MainFont', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 5px;
+    width: 50%;
+    text-align: left;
 }
 
 /* Добавляем стили для мобильных устройств */
@@ -138,6 +219,17 @@ header {
     }
     .content-panel {
         margin-left: 20px;
+    }
+
+    .infobox {
+        width: 225px;
+        float: center;
+        margin: 0.75em 0;
+        padding: 0.375em;
+    }
+
+    .infobox-table {
+        width: 212px;
     }
 }
 
