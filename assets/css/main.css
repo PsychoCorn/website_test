@@ -51,29 +51,30 @@ p {
 }
 
 .content-panel-header {
-    width: 200px;
+    width: 194px;
     background-repeat: no-repeat;
     background-color: rgb(53, 2, 2);
-    padding: -10px;
-    margin-left: -13px;
+    padding: 0px;
+    /*margin-left: -13px;
     margin-top: -13px;
     border: solid;
     border-radius: 5px;
-    border-color: white;
+    border-color: white;*/
 }
 
 .content-panel-header h2 {
-    margin-top: 0;
+    display: block;
+    margin: 0px 0px 0px 0px;
     font-size: 18px;
     text-align: center;
-    margin-left: -10px;
+    text-indent: 0px;
 }
 
 .content-panel {
     width: 200px;
     background-repeat: no-repeat;
     background-color: #000000;
-    padding: 10px;
+    /*padding: 10px;*/
     margin-left: 45px;
     border: solid;
     border-radius: 5px;
@@ -213,6 +214,14 @@ ol {
     text-align: left;
 }
 
+.sect {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
 /* Добавляем стили для мобильных устройств */
 @media only screen and (max-width: 600px) {
     header h1 {
@@ -220,7 +229,8 @@ ol {
         margin-right: 20px;
     }
     .content-panel {
-        margin-left: 20px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .infobox {
