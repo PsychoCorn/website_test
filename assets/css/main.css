@@ -50,6 +50,14 @@ p {
     text-indent: 25px;
 }
 
+ol {
+    font-family: 'MainFont', sans-serif;
+    font-size: 22px;
+    color: #ffffff;
+    list-style: lower-alpha;
+    counter-reset: li;
+}
+
 .content-panel {
     width: 200px;
     background-repeat: no-repeat;
@@ -131,14 +139,6 @@ header {
     margin-left: 25px;
 }
 
-ol {
-    font-family: 'MainFont', sans-serif;
-    font-size: 22px;
-    color: #ffffff;
-    list-style: lower-alpha;
-    counter-reset: li;
-}
-
 .content-panel li::before {
     counter-increment: li;
     content: counters(li,".") ". ";
@@ -177,6 +177,105 @@ ol {
 
 .infobox-link:hover {
     text-decoration: underline;
+}
+
+.infobox h2 {
+    margin-top: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* устанавливаем для таблицы внешнюю границу серого цвета толщиной 3px */
+/*.infobox-table {
+   border-top: 1px solid rgb(255, 255, 255);
+}*/
+/* задаём для ячейки тела таблицы границу серого цвета толщиной 1px */
+.infobox-table td {
+    /*border: 1px solid rgb(255, 255, 255);*/
+    font-family: 'MainFont', sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    padding-left: 5px;
+    width: 50%;
+    text-align: left;
+}
+
+.sect {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+}
+
+.images {
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+	max-width: 400px;
+    display: inline-block;
+    border: 1px solid rgb(255, 255, 255);
+    overflow: hidden;
+    
+}
+
+.images img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.images h2 {
+    color: #ffffff;
+    font-size: 16px;
+    text-align: 0px;
+    margin: 0px;
+}
+
+/* Добавляем стили для мобильных устройств */
+@media only screen and (max-width: 600px) {
+    header h1 {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .content-panel {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .infobox {
+        float: none;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container {
+        margin: 10px;
+    }
+}
+
+/* Добавляем стили для планшетов */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    header h1 {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .content-panel {
+        margin-left: 100px;
+    }
+}
+
+/* Добавляем стили для десктопных устройств */
+@media only screen and (min-width: 1025px) {
+    header h1 {
+        margin-left: 420px;
+        margin-right: 420px;
+    }
+    .content-panel {
+        margin-left: 45px;
+    }
 }
 
 .infobox h2 {
